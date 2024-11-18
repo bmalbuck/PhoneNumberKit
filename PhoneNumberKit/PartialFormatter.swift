@@ -10,7 +10,7 @@
 import Foundation
 
 /// Partial formatter
-public final class PartialFormatter {
+@objc public final class PartialFormatter {
     private let utility: PhoneNumberUtility
 
     weak var metadataManager: MetadataManager?
@@ -50,7 +50,7 @@ public final class PartialFormatter {
         self.ignoreIntlNumbers = ignoreIntlNumbers
     }
 
-    public var defaultRegion: String {
+    @objc public var defaultRegion: String {
         didSet {
             self.updateMetadataForDefaultRegion()
         }

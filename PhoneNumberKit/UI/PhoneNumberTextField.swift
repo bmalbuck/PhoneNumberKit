@@ -75,7 +75,7 @@ import UIKit
 
     public var withPrefixPrefill: Bool = true
 
-    public var withFlag: Bool = false {
+    @objc public var withFlag: Bool = false {
         didSet {
             leftView = self.withFlag ? self.flagButton : nil
             leftViewMode = self.withFlag ? .always : .never
@@ -146,7 +146,7 @@ import UIKit
         }
     }
 
-    public private(set) lazy var partialFormatter: PartialFormatter = .init(
+    @objc public private(set) lazy var partialFormatter: PartialFormatter = .init(
         utility: utility,
         defaultRegion: defaultRegion,
         withPrefix: withPrefix,
