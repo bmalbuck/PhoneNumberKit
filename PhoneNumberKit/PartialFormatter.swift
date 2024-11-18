@@ -39,6 +39,7 @@ import Foundation
          withPrefix: Bool = true,
          maxDigits: Int? = nil,
          ignoreIntlNumbers: Bool = false) {
+        super.init()
         self.utility = utility
         self.regexManager = regexManager
         self.metadataManager = metadataManager
