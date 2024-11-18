@@ -13,7 +13,7 @@ import Contacts
 
 public typealias MetadataCallback = () throws -> Data?
 
-public final class PhoneNumberUtility {
+@objc public final class PhoneNumberUtility: NSObject {
     // Manager objects
     let metadataManager: MetadataManager
     let parseManager: ParseManager
@@ -283,7 +283,7 @@ public final class PhoneNumberUtility {
     /// Get a user's default region code
     ///
     /// - returns: A computed value for the user's current region - based on the iPhone's carrier and if not available, the device region.
-    public class func defaultRegionCode() -> String {
+    @objc public class func defaultRegionCode() -> String {
         guard let regex = try? NSRegularExpression(pattern: PhoneNumberPatterns.countryCodePattern) else {
             return PhoneNumberConstants.defaultCountry
         }
