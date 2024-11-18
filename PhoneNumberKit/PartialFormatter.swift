@@ -39,16 +39,17 @@ import Foundation
          withPrefix: Bool = true,
          maxDigits: Int? = nil,
          ignoreIntlNumbers: Bool = false) {
-        super.init()
         self.utility = utility
         self.regexManager = regexManager
         self.metadataManager = metadataManager
         self.parser = parser
         self.defaultRegion = defaultRegion
-        self.updateMetadataForDefaultRegion()
         self.withPrefix = withPrefix
         self.maxDigits = maxDigits
         self.ignoreIntlNumbers = ignoreIntlNumbers
+
+        super.init()
+        self.updateMetadataForDefaultRegion()
     }
 
     @objc public var defaultRegion: String {
