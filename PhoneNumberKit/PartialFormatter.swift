@@ -10,7 +10,7 @@
 import Foundation
 
 /// Partial formatter
-@objc public final class PartialFormatter {
+@objc public final class PartialFormatter: NSObject {
     private let utility: PhoneNumberUtility
 
     weak var metadataManager: MetadataManager?
